@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Marks{% endblock title %}
+
+{% block body %}
+<body background="https://png.pngtree.com/thumb_back/fh260/back_pic/05/12/61/51599a3b852f170.jpg"style="background-repeat:no-repeat; background-size:100% 190%">
+
+	<div style="text-align:center">
+		<h3 style="color:orange">Marks</h3>
+		<a href="shome"><h3 style="color:red">Home</h3></a>
+		
+			<table width="100%" border="1">
+				<tr>
+					<th>Roll No</th>
+					<th>Name</th>
+					<th>Marks</th>
+				</tr>
+			{% for i in res %}
+				<tr>
+					<td>{{i.rollno}}</td>
+					<td>{{i.sname}}</td>
+					<td>{{i.marks}}</td>
+				</tr>
+			{% endfor %}
+			</table><br>
+</body>			
+		
+	</div>
+
+
+{% endblock body %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Faculty Sectoin{% endblock title %}
+
+{% block body %}
+<body background="https://png.pngtree.com/thumb_back/fh260/back_pic/05/12/61/51599a3b852f170.jpg"style="background-repeat:no-repeat; background-size:100% 190%">
+
+
+	<div style="text-align:center">
+		<h3 style="color:mediumslateblue">Faculty Login</h3>
+		<form action="flogin"method="post">
+		{% csrf_token%}
+			Username: <input type="text"name="fuser"><br><br>
+		    Password: <input type="number"name="fpass"><br><br>
+			<input type="submit" value="Login">
+		</form>
+		{{error}}
+	</div>
+
+</body>
+{% endblock body %}

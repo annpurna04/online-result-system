@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Account{% endblock title %}
+
+{% block body %}
+<body background="https://png.pngtree.com/thumb_back/fh260/back_pic/05/12/61/51599a3b852f170.jpg"style="background-repeat:no-repeat; background-size:100% 190%">
+
+	<div style="text-align:center">
+		<h3 style="color:aqua">Create Account</h3>
+		<a href="home"><h3 style="color:red">Home</h3></a>
+		<form action="create_account"method="post">
+		{% csrf_token%}
+			Roll No: <input type="text"name="rollno"><br><br>			
+			Name: <input type="text"name="sname"><br><br>
+			Password: <input type="number"name="spass"><br><br>
+			<input type="submit" value="Create">
+		</form>
+		{{msg}}
+	</div>
+</body>
+
+{% endblock body %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Sectoin{% endblock title %}
+
+{% block body %}
+<body background="https://png.pngtree.com/thumb_back/fh260/back_pic/05/12/61/51599a3b852f170.jpg"style="background-repeat:no-repeat; background-size:100% 190%">
+
+	<div style="text-align:center">
+		<h3 style="color:yellow">Student Login</h3>
+		<form action="slogin"method="post">
+		{% csrf_token%}
+			Roll No: <input type="number"name="rollno"><br><br>
+		    Password: <input type="number"name="spass"><br><br>
+			<input type="submit" value="Login">
+		</form>
+		{{error}}
+	</div>
+</body>
+
+{% endblock body %}
